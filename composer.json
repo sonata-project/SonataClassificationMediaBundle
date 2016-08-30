@@ -1,0 +1,44 @@
+{
+    "name": "sonata-project/classification-media-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony SonataClassificationMediaBundle",
+    "keywords": ["media", "sonata", "classification"],
+    "homepage": "https://sonata-project.org/bundles/classification-media",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Gripp",
+            "email": "mail@core23.de"
+        },
+        {
+            "name": "Sonata Community",
+            "homepage": "https://github.com/sonata-project/SonataClassificationMediaBundle/contributors"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "symfony/framework-bundle": "^2.8 || ^3.0",
+        "sonata-project/media-bundle": "^4.0@dev",
+        "sonata-project/classification-bundle": "^4.0@dev"
+    },
+    "require-dev": {
+        "sonata-project/admin-bundle": "^3.4",
+        "sllh/php-cs-fixer-styleci-bridge": "^2.0",
+        "symfony/phpunit-bridge": "^2.8 || ^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sonata\\ClassificationMediaBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sonata\\ClassificationMediaBundle\\Tests\\": "test/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
