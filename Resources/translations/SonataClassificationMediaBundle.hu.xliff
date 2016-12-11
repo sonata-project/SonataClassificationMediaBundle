@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" target-language="hu" datatype="plaintext" original="SonataClassificationBundle.en.xliff">
+        <body>
+            <trans-unit id="form.label_media">
+                <source>form.label_media</source>
+                <target>Média</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

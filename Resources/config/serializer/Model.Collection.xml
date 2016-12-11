@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serializer>
+    <class name="Sonata\ClassificationMediaBundle\Model\Collection" exclusion-policy="all" xml-root-name="collection">
+        <property name="media" serialized-name="media_id" type="sonata_media_media_id" expose="true" since-version="1.0" groups="sonata_api_read,sonata_api_write,sonata_search" />
+    </class>
+</serializer>
