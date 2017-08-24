@@ -14,7 +14,7 @@ namespace Sonata\ClassificationMediaBundle\Admin\Extension;
 use Sonata\AdminBundle\Admin\AbstractAdminExtension;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class CategoryAdminExtension extends AbstractAdminExtension
+final class CategoryAdminExtension extends AbstractAdminExtension
 {
     /**
      * {@inheritdoc}

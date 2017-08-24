@@ -12,9 +12,9 @@
 // if the bundle is within a symfony project, try to reuse the project's autoload
 
 $files = array(
+    __DIR__.'/../vendor/autoload.php',
     __DIR__.'/../../vendor/autoload.php',
-    __DIR__.'/../../../vendor/autoload.php',
-    __DIR__.'/../../../../../app/autoload.php',
+    __DIR__.'/../../../../app/autoload.php',
 );
 
 $autoload = false;
@@ -36,3 +36,4 @@ Visit http://getcomposer.org/ for more information.
 
 ');
 }
+g rh

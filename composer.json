@@ -33,7 +33,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Sonata\\ClassificationMediaBundle\\Tests\\": "test/"
+            "Sonata\\ClassificationMediaBundle\\Tests\\": "tests/"
         }
     },
     "extra": {
