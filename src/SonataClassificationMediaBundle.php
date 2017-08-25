@@ -15,5 +15,4 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class SonataClassificationMediaBundle extends Bundle
 {
-
 }
