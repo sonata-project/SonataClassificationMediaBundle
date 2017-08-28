@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<container xmlns="http://symfony.com/schema/dic/services"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="sonata.classifcationmedia.admin.extension.category" class="Sonata\ClassificationMediaBundle\Admin\Extension\CategoryAdminExtension">
-            <tag name="sonata.admin.extension" target="sonata.classifcationmedia.admin.category" />
+            <tag name="sonata.admin.extension" target="sonata.classifcationmedia.admin.category"/>
         </service>
-
         <service id="sonata.classifcationmedia.admin.extension.collection" class="Sonata\ClassificationMediaBundle\Admin\Extension\CollectionAdminExtension">
-            <tag name="sonata.admin.extension" target="sonata.classifcationmedia.admin.collection" />
+            <tag name="sonata.admin.extension" target="sonata.classifcationmedia.admin.collection"/>
         </service>
     </services>
-
 </container>
