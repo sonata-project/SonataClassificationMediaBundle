@@ -3,11 +3,13 @@
 <!--
     Show us you choose the right branch.
     Different branches are used for different things :
-    - 3.x is for everything backwards compatible, like patches, features and deprecation notices
+    - master is for everything backwards compatible, like patches, features and deprecation notices
     - master is for deprecation removals and other changes that cannot be done without a BC-break
     More details here: https://github.com/sonata-project/SonataClassificationMediaBundle/blob/master/CONTRIBUTING.md#the-base-branch
 -->
-I am targetting this branch, because {reason}.
+I am targeting this branch, because {reason}.
+
+In case of bug fix, `master` **MUST** be targeted.
 
 <!--
     Specify which issues will be fixed/closed.
