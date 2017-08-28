@@ -17,13 +17,13 @@
     ],
     "require": {
         "php": "^7.1",
-        "symfony/framework-bundle": "^2.8 || ^3.0",
+        "sonata-project/classification-bundle": "^3.0 || ^4.0",
         "sonata-project/media-bundle": "^3.0 || ^4.0",
-        "sonata-project/classification-bundle": "^3.0 || ^4.0"
+        "symfony/framework-bundle": "^2.8 || ^3.0"
     },
     "require-dev": {
-        "sonata-project/admin-bundle": "^3.4",
         "sllh/php-cs-fixer-styleci-bridge": "^2.0",
+        "sonata-project/admin-bundle": "^3.4",
         "symfony/phpunit-bridge": "^2.8 || ^3.0"
     },
     "autoload": {
@@ -35,6 +35,9 @@
         "psr-4": {
             "Sonata\\ClassificationMediaBundle\\Tests\\": "tests/"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {
