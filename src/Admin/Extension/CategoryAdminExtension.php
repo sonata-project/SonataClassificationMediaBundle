@@ -23,15 +23,15 @@ final class CategoryAdminExtension extends AbstractAdminExtension
     {
         $formMapper
             ->with('General')
-                ->add('media', 'sonata_type_model_list', array(
+                ->add('media', 'sonata_type_model_list', [
                     'required' => false,
                     'translation_domain' => 'SonataClassificationMediaBundle',
-                ), array(
-                    'link_parameters' => array(
+                ], [
+                    'link_parameters' => [
                         'provider' => 'sonata.media.provider.image',
                         'context' => 'sonata_collection',
-                    ),
-                ))
+                    ],
+                ])
             ->end();
     }
 }

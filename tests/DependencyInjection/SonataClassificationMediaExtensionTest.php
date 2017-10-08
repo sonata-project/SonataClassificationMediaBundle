@@ -18,14 +18,14 @@ class SonataClassificationMediaExtensionTest extends AbstractExtensionTestCase
 {
     public function testLoadDefault()
     {
-        $this->container->setParameter('kernel.bundles', array());
+        $this->container->setParameter('kernel.bundles', []);
         $this->load();
     }
 
     protected function getContainerExtensions()
     {
-        return array(
+        return [
             new SonataClassificationMediaExtension(),
-        );
+        ];
     }
 }
