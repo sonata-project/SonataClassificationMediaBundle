@@ -21,16 +21,16 @@ class ConfigurationTest extends TestCase
     {
         $processor = new Processor();
 
-        $config = $processor->processConfiguration(new Configuration(), array(array(
-        )));
+        $config = $processor->processConfiguration(new Configuration(), [[
+        ]]);
 
-        $expected = array(
-            'class' => array(
+        $expected = [
+            'class' => [
                 'category' => 'Application\\Sonata\\ClassificationBundle\\Entity\\Category',
                 'collection' => 'Application\\Sonata\\ClassificationBundle\\Entity\\Collection',
                 'media' => 'Application\\Sonata\\MediaBundle\\Entity\\Media',
-            ),
-        );
+            ],
+        ];
 
         $this->assertSame($expected, $config);
     }
@@ -39,21 +39,21 @@ class ConfigurationTest extends TestCase
     {
         $processor = new Processor();
 
-        $config = $processor->processConfiguration(new Configuration(), array(array(
-            'class' => array(
+        $config = $processor->processConfiguration(new Configuration(), [[
+            'class' => [
                 'category' => 'FooBundle\\ClassificationBundle\\Entity\\Category',
                 'collection' => 'FooBundle\\ClassificationBundle\\Entity\\Collection',
                 'media' => 'FooBundle\\MediaBundle\\Entity\\Media',
-            ),
-        )));
+            ],
+        ]]);
 
-        $expected = array(
-            'class' => array(
+        $expected = [
+            'class' => [
                 'category' => 'FooBundle\\ClassificationBundle\\Entity\\Category',
                 'collection' => 'FooBundle\\ClassificationBundle\\Entity\\Collection',
                 'media' => 'FooBundle\\MediaBundle\\Entity\\Media',
-            ),
-        );
+            ],
+        ];
 
         $this->assertSame($expected, $config);
     }

@@ -21,14 +21,14 @@ final class CollectionAdminExtension extends AbstractAdminExtension
      */
     public function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('media', 'sonata_type_model_list', array(
+        $formMapper->add('media', 'sonata_type_model_list', [
             'required' => false,
             'translation_domain' => 'SonataClassificationMediaBundle',
-        ), array(
-            'link_parameters' => array(
+        ], [
+            'link_parameters' => [
                 'provider' => 'sonata.media.provider.image',
                 'context' => 'sonata_collection',
-            ),
-        ));
+            ],
+        ]);
     }
 }
