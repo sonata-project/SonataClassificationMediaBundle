@@ -52,40 +52,40 @@ final class SonataClassificationMediaExtension extends Extension
 
         $collector = DoctrineCollector::getInstance();
 
-        $collector->addAssociation($config['class']['collection'], 'mapManyToOne', array(
+        $collector->addAssociation($config['class']['collection'], 'mapManyToOne', [
             'fieldName' => 'media',
             'targetEntity' => $config['class']['media'],
-            'cascade' => array(
+            'cascade' => [
                 'persist',
-            ),
+            ],
             'mappedBy' => null,
             'inversedBy' => null,
-            'joinColumns' => array(
-                array(
+            'joinColumns' => [
+                [
                  'name' => 'media_id',
                  'referencedColumnName' => 'id',
                  'onDelete' => 'SET NULL',
-                ),
-            ),
+                ],
+            ],
             'orphanRemoval' => false,
-        ));
+        ]);
 
-        $collector->addAssociation($config['class']['category'], 'mapManyToOne', array(
+        $collector->addAssociation($config['class']['category'], 'mapManyToOne', [
             'fieldName' => 'media',
             'targetEntity' => $config['class']['media'],
-            'cascade' => array(
+            'cascade' => [
                 'persist',
-            ),
+            ],
             'mappedBy' => null,
             'inversedBy' => null,
-            'joinColumns' => array(
-                array(
+            'joinColumns' => [
+                [
                  'name' => 'media_id',
                  'referencedColumnName' => 'id',
                  'onDelete' => 'SET NULL',
-                ),
-            ),
+                ],
+            ],
             'orphanRemoval' => false,
-        ));
+        ]);
     }
 }
