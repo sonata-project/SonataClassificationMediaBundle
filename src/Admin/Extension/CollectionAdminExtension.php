@@ -13,6 +13,7 @@ namespace Sonata\ClassificationMediaBundle\Admin\Extension;
 
 use Sonata\AdminBundle\Admin\AbstractAdminExtension;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Form\Type\ModelListType;
 
 final class CollectionAdminExtension extends AbstractAdminExtension
 {
@@ -21,7 +22,7 @@ final class CollectionAdminExtension extends AbstractAdminExtension
      */
     public function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('media', 'sonata_type_model_list', [
+        $formMapper->add('media', ModelListType::class, [
             'required' => false,
             'translation_domain' => 'SonataClassificationMediaBundle',
         ], [
