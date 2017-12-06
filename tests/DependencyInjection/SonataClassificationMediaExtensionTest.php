@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the Sonata Project package.
  *
@@ -16,7 +18,7 @@ use Sonata\ClassificationMediaBundle\DependencyInjection\SonataClassificationMed
 
 class SonataClassificationMediaExtensionTest extends AbstractExtensionTestCase
 {
-    public function testLoadDefault()
+    public function testLoadDefault(): void
     {
         $this->container->setParameter('kernel.bundles', []);
         $this->load();
