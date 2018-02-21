@@ -21,17 +21,20 @@
     ],
     "require": {
         "php": "^7.1",
-        "sonata-project/classification-bundle": "^3.0 || ^4.0",
-        "sonata-project/media-bundle": "^3.0 || ^4.0",
+        "sonata-project/classification-bundle": "^3.6 || ^4.0",
+        "sonata-project/media-bundle": "^3.10 || ^4.0",
         "symfony/config": "^2.8 || ^3.2 || ^4.0",
         "symfony/dependency-injection": "^2.8 || ^3.2 || ^4.0",
         "symfony/framework-bundle": "^2.8 || ^3.2 || ^4.0",
         "symfony/http-kernel": "^2.8 || ^3.2 || ^4.0"
     },
+    "conflict": {
+        "sonata-project/admin-bundle": "<3.31 || >=4.0"
+    },
     "require-dev": {
         "matthiasnoback/symfony-dependency-injection-test": "^1.1",
-        "sonata-project/admin-bundle": "^3.4",
-        "symfony/phpunit-bridge": "^3.3 || ^4.0"
+        "sonata-project/admin-bundle": "^3.31",
+        "symfony/phpunit-bridge": "^4.0"
     },
     "config": {
         "sort-packages": true
