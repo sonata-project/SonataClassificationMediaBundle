@@ -1,21 +1,10 @@
 <?php
 
-/*
- * This file is part of the ni-ju-san CMS.
- *
- * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 // if the bundle is within a symfony project, try to reuse the project's autoload
 
-$files = array(
+$files = [
     __DIR__.'/../vendor/autoload.php',
-    __DIR__.'/../../vendor/autoload.php',
-    __DIR__.'/../../../../app/autoload.php',
-);
+];
 
 $autoload = false;
 foreach ($files as $file) {
