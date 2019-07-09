@@ -41,9 +41,6 @@ final class SonataClassificationMediaExtension extends Extension
         $this->registerDoctrineMapping($config);
     }
 
-    /**
-     * @param array $config
-     */
     public function registerDoctrineMapping(array $config): void
     {
         foreach ($config['class'] as $type => $class) {
