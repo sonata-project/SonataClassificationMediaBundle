@@ -18,6 +18,9 @@ use Sonata\ClassificationMediaBundle\DependencyInjection\SonataClassificationMed
 
 class SonataClassificationMediaExtensionTest extends AbstractExtensionTestCase
 {
+    /**
+     * @doesNotPerformAssertions
+     */
     public function testLoadDefault(): void
     {
         $this->container->setParameter('kernel.bundles', []);
