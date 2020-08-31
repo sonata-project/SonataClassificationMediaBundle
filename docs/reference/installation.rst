@@ -10,15 +10,12 @@ To begin, add the dependent bundles to the vendor/bundles directory. Add the fol
 
     composer require sonata-project/classification-media-bundle
 
-Now, add the bundle to the kernel::
+Then, enable the bundle and the bundles it relies on by adding the following
+line in `bundles.php` file of your project::
 
-  // app/AppKernel.php
+    // config/bundles.php
 
-  public function registerBundles()
-  {
-      return [
-          // ...
-          new Sonata\ClassificationMediaBundle\SonataClassificationMediaBundle(),
-          // ...
-      ];
-  }
+    return [
+        // ...
+        Sonata\ClassificationMediaBundle\SonataClassificationMediaBundle::class => ['all' => true],
+    ];
