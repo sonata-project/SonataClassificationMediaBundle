@@ -35,4 +35,3 @@ rules:
 
 whitelist:
     lines:
-        - '.. versionadded:: master'
