@@ -19,9 +19,6 @@ use Sonata\AdminBundle\Form\Type\ModelListType;
 
 final class CategoryAdminExtension extends AbstractAdminExtension
 {
-    /**
-     * {@inheritdoc}
-     */
     public function configureFormFields(FormMapper $formMapper): void
     {
         $formMapper
