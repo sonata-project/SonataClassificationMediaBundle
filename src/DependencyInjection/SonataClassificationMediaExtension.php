@@ -13,7 +13,8 @@ declare(strict_types=1);
 
 namespace Sonata\ClassificationMediaBundle\DependencyInjection;
 
-use Sonata\EasyExtendsBundle\Mapper\DoctrineCollector;
+use Sonata\Doctrine\Mapper\Builder\OptionsBuilder;
+use Sonata\Doctrine\Mapper\DoctrineCollector;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -48,40 +49,16 @@ final class SonataClassificationMediaExtension extends Extension
 
         $collector = DoctrineCollector::getInstance();
 
-        $collector->addAssociation($config['class']['collection'], 'mapManyToOne', [
-            'fieldName' => 'media',
-            'targetEntity' => $config['class']['media'],
-            'cascade' => [
-                'persist',
-            ],
-            'mappedBy' => null,
-            'inversedBy' => null,
-            'joinColumns' => [
-                [
-                 'name' => 'media_id',
-                 'referencedColumnName' => 'id',
-                 'onDelete' => 'SET NULL',
-                ],
-            ],
-            'orphanRemoval' => false,
-        ]);
+        $mediaOptions = OptionsBuilder::createManyToOne('media', $config['class']['media'])
+            ->cascade(['persist'])
+            ->addJoin([
+                'name' => 'media_id',
+                'referencedColumnName' => 'id',
+                'onDelete' => 'SET NULL',
+            ]);
 
-        $collector->addAssociation($config['class']['category'], 'mapManyToOne', [
-            'fieldName' => 'media',
-            'targetEntity' => $config['class']['media'],
-            'cascade' => [
-                'persist',
-            ],
-            'mappedBy' => null,
-            'inversedBy' => null,
-            'joinColumns' => [
-                [
-                 'name' => 'media_id',
-                 'referencedColumnName' => 'id',
-                 'onDelete' => 'SET NULL',
-                ],
-            ],
-            'orphanRemoval' => false,
-        ]);
+        $collector->addAssociation($config['class']['collection'], 'mapManyToOne', $mediaOptions);
+
+        $collector->addAssociation($config['class']['category'], 'mapManyToOne', $mediaOptions);
     }
 }
