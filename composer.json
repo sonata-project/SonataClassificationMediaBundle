@@ -23,18 +23,18 @@
         "php": "^7.1",
         "sonata-project/classification-bundle": "^3.6 || ^4.0",
         "sonata-project/media-bundle": "^3.10 || ^4.0",
-        "symfony/config": "^3.4 || ^4.2",
-        "symfony/dependency-injection": "^3.4 || ^4.2",
-        "symfony/framework-bundle": "^3.4 || ^4.2",
-        "symfony/http-kernel": "^3.4 || ^4.2"
+        "symfony/config": "^4.4",
+        "symfony/dependency-injection": "^4.4",
+        "symfony/framework-bundle": "^4.4",
+        "symfony/http-kernel": "^4.4"
     },
     "conflict": {
         "sonata-project/admin-bundle": "<3.31 || >=4.0"
     },
     "require-dev": {
         "matthiasnoback/symfony-dependency-injection-test": "^4.0",
-        "sonata-project/admin-bundle": "^3.31",
-        "symfony/phpunit-bridge": "^5.0"
+        "sonata-project/admin-bundle": "^3.75",
+        "symfony/phpunit-bridge": "^5.1.1"
     },
     "config": {
         "sort-packages": true
