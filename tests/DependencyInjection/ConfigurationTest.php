@@ -13,50 +13,29 @@ declare(strict_types=1);
 
 namespace Sonata\ClassificationMediaBundle\Tests\DependencyInjection;
 
+use Matthias\SymfonyConfigTest\PhpUnit\ConfigurationTestCaseTrait;
 use PHPUnit\Framework\TestCase;
 use Sonata\ClassificationMediaBundle\DependencyInjection\Configuration;
-use Symfony\Component\Config\Definition\Processor;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
 
-class ConfigurationTest extends TestCase
+final class ConfigurationTest extends TestCase
 {
-    public function testDefaultOptions(): void
+    use ConfigurationTestCaseTrait;
+
+    public function testDefault(): void
     {
-        $processor = new Processor();
-
-        $config = $processor->processConfiguration(new Configuration(), [[
-        ]]);
-
-        $expected = [
+        $this->assertProcessedConfigurationEquals([
+        ], [
             'class' => [
-                'category' => 'Application\\Sonata\\ClassificationBundle\\Entity\\Category',
-                'collection' => 'Application\\Sonata\\ClassificationBundle\\Entity\\Collection',
-                'media' => 'Application\\Sonata\\MediaBundle\\Entity\\Media',
+                'category' => 'App\Entity\SonataClassificationCategory',
+                'media' => 'App\Entity\SonataMediaMedia',
+                'collection' => 'App\Entity\SonataClassificationCollection',
             ],
-        ];
-
-        $this->assertSame($expected, $config);
+        ]);
     }
 
-    public function testOptions(): void
+    protected function getConfiguration(): ConfigurationInterface
     {
-        $processor = new Processor();
-
-        $config = $processor->processConfiguration(new Configuration(), [[
-            'class' => [
-                'category' => 'FooBundle\\ClassificationBundle\\Entity\\Category',
-                'collection' => 'FooBundle\\ClassificationBundle\\Entity\\Collection',
-                'media' => 'FooBundle\\MediaBundle\\Entity\\Media',
-            ],
-        ]]);
-
-        $expected = [
-            'class' => [
-                'category' => 'FooBundle\\ClassificationBundle\\Entity\\Category',
-                'collection' => 'FooBundle\\ClassificationBundle\\Entity\\Collection',
-                'media' => 'FooBundle\\MediaBundle\\Entity\\Media',
-            ],
-        ];
-
-        $this->assertSame($expected, $config);
+        return new Configuration();
     }
 }
