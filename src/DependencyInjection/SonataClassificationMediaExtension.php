@@ -22,9 +22,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 final class SonataClassificationMediaExtension extends Extension
 {
-    /**
-     * {@inheritdoc}
-     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $processor = new Processor();
