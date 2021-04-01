@@ -34,8 +34,7 @@ final class Configuration implements ConfigurationInterface
                         ->scalarNode('media')->defaultValue('App\\Entity\\SonataMediaMedia')->end()
                     ->end()
                 ->end()
-            ->end()
-        ;
+            ->end();
 
         return $treeBuilder;
     }
