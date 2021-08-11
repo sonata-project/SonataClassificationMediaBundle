@@ -42,4 +42,4 @@ This package is available under the [MIT license](LICENSE).
 [coverage_unstable_link]: https://codecov.io/gh/sonata-project/SonataClassificationMediaBundle/branch/master
 
 [documentation_unstable_badge]: https://readthedocs.org/projects/sonataclassificationmediabundle/badge/?version=master
-[documentation_unstable_link]: https://docs.readthedocs.org/projects/SonataClassificationMediaBundle/en/master/?badge=master
+[documentation_unstable_link]: https://docs.sonata-project.org/projects/SonataClassificationMediaBundle/en/master/?badge=master
