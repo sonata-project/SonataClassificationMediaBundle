@@ -55,5 +55,6 @@
         "psr-4": {
             "Sonata\\ClassificationMediaBundle\\Tests\\": "tests/"
         }
-    }
+    },
+    "abandoned": true
 }
