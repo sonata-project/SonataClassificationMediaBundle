@@ -7,7 +7,7 @@
         "sonata",
         "classification"
     ],
-    "homepage": "https://sonata-project.org/bundles/classification-media",
+    "homepage": "https://github.com/sonata-project/SonataClassificationMediaBundle",
     "license": "MIT",
     "authors": [
         {
