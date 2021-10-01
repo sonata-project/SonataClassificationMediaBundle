@@ -1,5 +1,5 @@
-EasyExtends Bundle
-==================
+SonataClassificationMedia Bundle
+================================
 
 .. toctree::
    :caption: Reference Guide
